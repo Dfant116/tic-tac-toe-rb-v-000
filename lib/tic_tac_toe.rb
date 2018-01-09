@@ -52,12 +52,11 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
   if valid_move?(board, index)
-    true
+    move(board, position, char)
   else !valid_move?(board, index)
     puts "invalid"
     turn(board)
   end
-  move(board, position, char)
 end
 
 
