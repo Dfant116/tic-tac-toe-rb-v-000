@@ -117,10 +117,8 @@ def play(board)
   puts 'turn'
     turn(board)
   end
-  if (board[win_combo[0]]) == "X" && (board[win_combo[1]]) == "X" && (board[win_combo[2]]) == "X"
-    puts "Congratulations X!"
-  elsif (board[win_combo[0]]) == "O" && (board[win_combo[1]]) == "O" && (board[win_combo[2]]) == "O"
-    puts "Congratulations O!"
+  if winner(board)
+    puts "Congratulations!"
   elsif draw?(board)
     puts "Draw!"
   else
