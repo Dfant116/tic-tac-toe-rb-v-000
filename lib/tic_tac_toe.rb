@@ -11,9 +11,6 @@ WIN_COMBINATIONS = [
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-def play(board)
-  input = gets
-end
 
 def display_board(board)
  puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -113,4 +110,18 @@ def winner(board)
     end
   end
   return nil
+end
+
+def play(board)
+  until over?(board) == true || won?(board) != false
+  puts 'turn'
+    turn(board)
+  end
+  if winner(board)
+    puts "Congratulations!"
+  elsif draw?(board)
+    puts "Draw!"
+  else
+    return nil
+  end
 end
