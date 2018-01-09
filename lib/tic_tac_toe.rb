@@ -53,7 +53,7 @@ def turn(board)
   index = input_to_index(user_input)
   char = current_player(board)
   if valid_move?(board, index)
-    move(board, position, char)
+    move(board, index, char)
   else
     puts "invalid"
     turn(board)
