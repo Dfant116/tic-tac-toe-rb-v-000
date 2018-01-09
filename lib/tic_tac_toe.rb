@@ -56,8 +56,8 @@ def turn(board)
   else !valid_move?(board, index)
     puts "invalid"
   end
-  move(board, index)
-  display_board(board)
+  move(board, position, char)
+  
 end
 
 def turn_count(board)
