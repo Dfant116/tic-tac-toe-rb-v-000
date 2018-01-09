@@ -54,7 +54,7 @@ def turn(board)
   char = current_player(board)
   if valid_move?(board, index)
     move(board, position, char)
-  else 
+  else
     puts "invalid"
     turn(board)
   end
